@@ -21,3 +21,10 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+  display:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: print sawwaf
+      run: echo Eid Mubarak from Sayma and Sawwaf
