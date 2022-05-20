@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: '1.8'
-        ref: release-branch
+        
         
     - name: Build with Maven
       run: mvn -B package --file pom.xml
@@ -35,6 +35,7 @@ jobs:
           repo: Dev
           github-token: ${{ secrets.ACCESS_TOKEN }}
           workflow_file_name: maven.yml
+          ref: master
           
     - name: QA trigger
       run: |
