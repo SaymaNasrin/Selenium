@@ -32,7 +32,7 @@ jobs:
       with:
           owner: SaymaM
           repo: Dev
-          github-token: ${{ secret_ACCESS_TOKEN }}
+          github-token: ${{ secrets_ACCESS_TOKEN }}
           workflow_file_name: maven.yml
     - name: QA trigger
       run: |
