@@ -36,5 +36,5 @@ jobs:
           workflow_file_name: maven.yml
     - name: QA trigger
       run: |
-           echo "trigger and done"
+           echo "trigger and done "
     
