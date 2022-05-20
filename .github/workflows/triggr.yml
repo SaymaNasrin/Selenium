@@ -33,7 +33,7 @@ jobs:
       with:
           owner: SaymaM
           repo: Dev
-          github-token: ${{ secrets.ACCESS_TOKEN_TEST }}
+          github-token: ${{ secrets.ACCESS_TOKEN }}
           workflow_file_name: maven.yml
           ref: master
           
