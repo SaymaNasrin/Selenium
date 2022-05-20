@@ -31,16 +31,14 @@ jobs:
     - name: trigger SaymaM repo
       uses: convictional/trigger-workflow-and-wait@v1.3.0
       with:
-          github_token: ${{ secrets.TEST_ACCESS_TOKEN }}
-          script: |
-            await github.rest.actions.createWorkflowDispatch({
           owner: 'SaymaM'
           repo: 'Dev'
-          workflow_id: 'maven.yml'
+          github_token: ${{ secrets.TEST_ACCESS_TOKEN }}
+          workflow_file_name: 'maven.yml'
           ref: 'master'
           #workflow_file_name: 'maven.yml' 
           
-          #ref: master
+      
  
     - name: QA trigger
       run: |
