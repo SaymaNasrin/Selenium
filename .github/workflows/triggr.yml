@@ -33,7 +33,7 @@ jobs:
       with:
           github_token: ${{ secrets.TEST_ACCESS_TOKEN }}
           script: |
-            await github.rest.actions.createWorkflowDispatch
+            await github.rest.actions.createWorkflowDispatch({
           owner: 'SaymaM'
           repo: 'Dev'
           workflow_id: 'maven.yml'
