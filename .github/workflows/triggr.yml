@@ -1,0 +1,40 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Trigger another repo
+
+on:
+  push:
+    branches: [ master ]
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: '1.8'
+        
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+      
+    - name: trigger the workflow from selenium repo
+      run: |
+           echo "trigger and wait"
+           
+    - name: trigger SaymaM repo
+      uses: convictional/trigger-workflow-and-wait@v1.3.0
+      with:
+          owner: SaymaM
+          repo: Dev
+          github-token: ${{ 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 }}
+          workflow_file_name: maven.yml
+    - name: QA trigger
+      run: |
+           echo "trigger and done"
+    
