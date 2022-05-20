@@ -33,9 +33,9 @@ jobs:
       with:
           owner: SaymaM
           repo: Dev
-          github-token: ${{ secrets.ACCESS_TOKEN }}
+          github_token: ${{ secrets.TEST_ACCESS_TOKEN }}
           workflow_file_name: maven.yml
-          ref: master
+          #ref: master
           
     - name: QA trigger
       run: |
