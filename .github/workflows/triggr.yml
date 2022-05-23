@@ -42,5 +42,5 @@ jobs:
  
     - name: QA trigger
       run: |
-           echo "trigger and done "
+           echo "trigger and done"
     
