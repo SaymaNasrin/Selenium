@@ -51,5 +51,5 @@ jobs:
       env:
         message: assignment sesh holo
         new_msg: try print
-        run: echo $message $new_msg
+      run: echo $message $new_msg
  
