@@ -36,15 +36,20 @@ jobs:
           github_token: ${{ secrets.TEST_ACCESS_TOKEN }}
           workflow_file_name: 'maven.yml'
           ref: 'master'
-          keep_files: true
           #workflow_file_name: 'maven.yml' 
           
     - name: QA trigger
       run: |
            echo "trigger and done"
-    - name: print a message
+           
+  display:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: print a msg
       env:
         message: assignment sesh holo
         new_msg: try print
-      run: echo $message $new_msg
+        run: echo $message $new_msg
  
