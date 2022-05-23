@@ -43,4 +43,14 @@ jobs:
     - name: QA trigger
       run: |
            echo "trigger and done"
+           
+ 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+         npm install
+         npm run lint
+
     
