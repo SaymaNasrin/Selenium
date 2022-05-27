@@ -5,8 +5,8 @@ name: dependency (task 1) check 1
 
 on: 
   push:
-  schedule:
-     - cron: '*/20 * * * *'
+ # schedule:
+   #  - cron: '*/20 * * * *'
      
 jobs:
   job1:
